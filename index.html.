@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10151e">
+<title>GOLD AI TRADER</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#10151e;color:#f4f5f7;
+font-family:Arial,sans-serif;padding:20px}
+header{display:flex;justify-content:space-between;
+align-items:center;margin-bottom:24px}
+h1{font-size:21px;color:#e5b94d}
+.card{background:#202b39;padding:18px;
+border-radius:15px;margin-bottom:15px}
+.muted{color:#aab4c3;font-size:13px}
+.price{font-size:30px;color:#e5b94d;font-weight:bold}
+.signal{font-size:30px;color:#e5b94d;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{width:100%;padding:14px;border:0;
+border-radius:10px;background:#c99a38;
+font-weight:bold;margin-top:10px}
+button.secondary{background:#39485b;color:white}
+.status{color:#e5b94d}
+</style>
+</head>
+<body>
+<header>
+  <h1>GOLD AI TRADER</h1>
+  <span class="muted">DEMO</span>
+</header>
+
+<div class="card">
+  <div class="muted">INSTRUMEN</div>
+  <div class="price">XAUUSD</div>
+  <div class="muted">Gold / US Dollar</div>
+</div>
+
+<div class="card">
+  <div class="muted">AI MARKET SIGNAL</div>
+  <div class="signal" id="signal">HOLD</div>
+  <p class="muted">Belum terhubung ke data pasar live</p>
+  <div class="grid">
+    <div>
+      <div class="muted">TIMEFRAME</div>
+      <b>M15</b>
+    </div>
+    <div>
+      <div class="muted">INDIKATOR</div>
+      <b>EMA / RSI / MACD</b>
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <div class="muted">RISIKO</div>
+    <b>0.5%</b>
+  </div>
+  <div class="card">
+    <div class="muted">STOP LOSS</div>
+    <b>ATR x 2</b>
+  </div>
+</div>
+
+<div class="card">
+  <h3>ROBOT CONTROL</h3>
+  <p class="muted">Koneksi MT5</p>
+  <b class="status" id="connection">Belum terhubung</b>
+  <p class="muted">Auto Trading</p>
+  <b id="robot">OFF</b>
+  <button onclick="alert('MT5 belum terhubung. Tidak ada order dikirim.')">
+    HUBUNGKAN MT5
+  </button>
+  <button class="secondary"
+    onclick="alert('Mode demo: robot belum aktif.')">
+    AUTO TRADING
+  </button>
+</div>
+
+<div class="card">
+  <h3>TRADE HISTORY</h3>
+  <p class="muted">Belum ada transaksi.</p>
+</div>
+
+<p class="muted" style="text-align:center">
+GOLD AI TRADER • Versi 1.0 • Dashboard Demo
+</p>
+</body>
+</html>
